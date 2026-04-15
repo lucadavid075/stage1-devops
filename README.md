@@ -15,15 +15,21 @@ cd stage1-devops
 ```
 
 ### 2. Create virtual environment
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 
 ### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Run the application
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
+```
 
 ## API Endpoints
 
@@ -32,8 +38,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 Returns a message confirming the API is running.
 
 Test locally:
-
+```bash
 curl http://127.0.0.1:8000/
+```
 
 **Response:**
 ```json
@@ -47,8 +54,9 @@ GET /health
 Returns the health status of the API.
 
 Test locally:
-
+```bash
 curl http://127.0.0.1:8000/health
+```
 
 **Response:**
 ```json
@@ -62,8 +70,9 @@ GET /me
 Returns user information.
 
 Test locally:
-
-curl http://127.0.0.1:8000/
+```bash
+curl http://127.0.0.1:8000/me
+```
 
 **Response:**
 ```json
@@ -71,7 +80,8 @@ curl http://127.0.0.1:8000/
   "name": "David Luke",
   "email": "daiveedlucas049@gmail.com",
   "github": "https://github.com/lucadavid075"
-}```
+}
+```
 
 ## Live Deployment
 
